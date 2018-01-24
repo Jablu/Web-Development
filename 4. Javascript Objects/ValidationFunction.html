@@ -1,0 +1,68 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Validation Example</title>
+    
+    <link href="myStyleSheet.css" rel="stylesheet" />
+
+
+    <script>
+
+        function checkData() {
+
+            var number = num.value;
+            if (isNaN(number)) {
+                alert("Enter Number In Number Field Only")
+                num.focus();
+                return false;
+            }
+            var name_field = nam.value;
+            if (!isNaN(name_field)) {
+                alert("Enter Characters In Name Field Only")
+                nam.focus();
+                return false;
+            }
+            var data_field = data.value;
+            if (data_field.length == 0) {
+                alert("Data is manadatory")
+                data.focus();
+                return false;
+            }
+            return true;
+
+        }
+
+    </script>
+
+
+</head>
+<body>
+    <div class="myHeader">
+        <header class="styleHeading">    
+        JS Validation Function
+        </header>
+    </div>
+
+       <div class="myForm">
+        <form class="myTable" onsubmit="return checkData()">
+        
+
+                    <br />
+                    <label for="num" class="myFormLabel">Enter any Number:</label><br />
+                    <input type="text" id="num" class="myFormInput" name="textNum"/><br />
+
+                    <br />
+                    <label for="nam" class="myFormLabel">Enter any Character:</label><br />
+                    <input type="text" id="nam" class="myFormInput" name="textName"/><br />
+                    
+                    <br />
+                    <label for="data" class="myFormLabel">Enter any Data:</label><br />
+                    <input type="text" id="data" class="myFormInput" name="textData"/><br />
+
+                    <br />
+                    <button type="submit" class="myGoButton" onclick="checkData()">Submit</button>
+                    
+            </form>
+           </div>
+</body>
+</html>

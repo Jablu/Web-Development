@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>
+    </title>
+    <script>
+
+        function displayName()
+        {
+            var names = new Array(6);
+            names[0] = "Jhon";
+            names[1] = "Snow";
+            names[2] = "Will";
+            names[3] = "Never";
+            names[4] = "Die";
+            names[5] = "Idiot";
+           
+            //Or
+            var names = ["In","between","space","and"]
+
+
+            var str = "<ol>";
+            for (var i = 0; i < names.length; i++)
+            {
+                str+="<li>"+names[i]+"</li>"
+            }
+            str += "</ol>"
+            d1.innerHTML = str;
+        }
+
+    </script>
+</head>
+<body>
+     <h1>Arrays in Java Script</h1>
+
+      <input type="button" value="Display Names" onclick="displayName()"/>
+       
+        <div id="d1"></div>
+
+        
+</body>
+</html>

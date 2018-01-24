@@ -1,0 +1,40 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <script>
+        //Global Declatation
+        var names = new Array();
+        function storeIT() {
+            var n = textButton.value;
+            names.push(n);
+            //alert("Name Pushed!");
+            displayIT();
+        }
+        function displayIT() {
+            var str = "<ol>";
+            for (var i = 0; i < names.length; i++)
+            {
+                str += "<li>" + names[i] + "</li>";
+            }
+            str += "</ol>"
+            viewBox.innerHTML = str;
+        }
+    </script>
+
+</head>
+<body>
+    <label>Enter name:</label>
+    <input type="text" id="textButton"/>
+    <input type="button"
+            value="Store"
+               onclick="storeIT()" />
+    <input type="button"
+            value="Display"
+               onclick="displayIT()" />
+    <div id="viewBox"></div>
+
+
+</body>
+</html>

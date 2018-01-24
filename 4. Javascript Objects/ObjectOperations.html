@@ -1,0 +1,23 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        var window_object;
+        function openWindow() {
+
+            window_object = window.open("https://www.google.co.in/");
+
+        }
+        function closeWindow() {
+
+            window_object.close();
+        }
+
+    </script>
+</head>
+<body>
+    <input type="button" value="Open Google" onclick="openWindow()" />
+    <input type="button" value="Close Google" onclick="closeWindow()" />
+</body>
+</html>

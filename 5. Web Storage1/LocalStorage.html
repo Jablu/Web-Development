@@ -1,0 +1,50 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function displayCounter() {
+
+            if (Storage == "undefined") {
+                alert("Browser doesn't support storage!");
+            }
+            else {
+                var cnt;
+                if (localStorage.counter == '') {
+                    //first time
+                    cnt = 1;
+                    localStorage.setItem("counter", cnt);
+                }
+                else {
+                    cnt = localStorage.getItem("counter");
+                    cnt++;
+                    localStorage.setItem("counter", cnt);
+                }
+                showBox.innerHTML = cnt;
+            }
+
+        }
+    </script>
+    <link href="myStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="myHeader">
+        <header class="styleHeading">    
+        Web Storage Example
+        </header>
+    </div>
+
+       <div class="myForm">
+        <form class="myTable">
+        
+                    <br />
+                    
+                    <p id="showBox">Hiii</p>
+                    <br />
+                    <input type="button" class="myGoButton" onclick="displayCounter()" value="Increment"></input>
+                    
+            </form>
+           </div>
+</body>
+</html>

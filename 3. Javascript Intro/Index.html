@@ -1,0 +1,58 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+
+    <!-- Linking -->
+    <script src="MyScript.js"></script>
+
+
+    <script>
+        function displayMsg()
+        {
+            var msg = "Come on, sing Along...All night Long";
+            alert(msg);
+        }
+    </script>
+
+</head>
+<body>
+
+    <h1 onmouseover="displayMsg()">Java Script Example</h1>
+    <!-- Inline -->
+    <input 
+        type="button" 
+        value="Click Here" 
+        onclick="alert('Hello')" >
+    </input>
+    
+    <br />
+
+    <!-- Multiple Lines -->
+    <input 
+        type="button" 
+        value="Click Here" 
+        onclick="var msg = 'Good Afternnon';
+                            alert(msg);" >
+    </input>
+
+    
+    <br />
+    <!-- Embedded -->
+    <input 
+        type="button" 
+        value="Embeded" 
+        onclick="displayMsg()">
+    </input>
+    
+    <br />
+    
+    <!-- External-->
+    <input 
+        type="button" 
+        value="External" 
+        onclick="showMsg()">
+    </input>
+
+</body>
+</html>

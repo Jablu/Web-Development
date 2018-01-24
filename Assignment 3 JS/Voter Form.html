@@ -1,0 +1,47 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        function findResult()
+        {
+            var findAge = age.value;
+            if (findAge >= 18) {
+                showBox.innerHTML = "Eligible";
+                showBox.style.color = "Green";
+            }
+            else {
+                showBox.innerHTML = "Ineligible";
+                showBox.style.color = "Red";
+            }
+        }
+    </script>
+    <link href="myStyleSheet.css" rel="stylesheet" />
+</head>
+<body>
+
+    <div class="myHeader">
+        <header class="styleHeading">    
+        Voter Form
+        </header>
+    </div>
+
+       <div class="myForm">
+        <form class="myTable">
+        
+                    <br />
+                    <label for="name" class="myFormLabel">Name:</label><br />
+                    <input type="text" id="name" class="myFormInput"/><br />
+                    <br />
+                    <label for="age" class="myFormLabel">Age:</label><br />
+                    <input type="number" id="age" class="myFormInput"/><br />
+                    <br />
+                    <label class="myFormLabel">Resut:</label><br />
+                    <p id="showBox"></p>
+                    <br />
+                    <button type="button" class="myGoButton" onclick="findResult()">Check</button>
+                    
+            </form>
+           </div>
+</body>
+</html>

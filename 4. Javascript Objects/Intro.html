@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title></title>
+    <script>
+        var str = "Welcome to ITC infotech Bangalore";
+        function scrollMsg() {
+            var s = str.substr(0, 1);
+            var s2 = str.substr(1, str.length - 1);
+            str = s2 + s;
+            //alert(s);
+            window.status = str;
+        }
+    </script>
+</head>
+<body onload="window.setInterval ('scrollMsg()',100)">
+</body>
+</html>

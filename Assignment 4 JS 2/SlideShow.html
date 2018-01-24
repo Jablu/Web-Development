@@ -1,0 +1,86 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Slide Show</title>
+    
+    <link href="myStyleSheet.css" rel="stylesheet" />
+
+    <script>
+
+        var imageArray = ["a.jpg", "b.jpg", "c.jpg","d.jpg"];
+        function openImageWindow(x)
+        {
+            
+            if (x == 0)
+            {
+                window.open(imageArray[0]);
+            }
+            if (x == 1) {
+                window.open(imageArray[1]);
+            }
+            if (x == 2) {
+                window.open(imageArray[2]);
+            }
+            if (x == 3) {
+                window.open(imageArray[3]);
+            }
+        }
+
+    </script>
+
+</head>
+<body>
+    <div class="myHeader">
+        <header class="styleHeading">    
+        Hover Slide Show
+        </header>
+    </div>
+    <div class="myForm">
+        <form class="myTable" >
+        
+                   <table>
+
+                       <tr style="text-align:center;">
+                           <td >
+
+                               <img id="Img0" 
+                                   onmouseover="openImageWindow(0)"
+                                   src="a.jpg"
+                                   width = ""
+                                   height = "120"
+                                   
+                                   />
+
+                           </td>
+                           <td>
+                               <img id="Img1" 
+                                   onmouseover="openImageWindow(1)"
+                                   src="b.jpg"
+                                   width = ""
+                                   height = "120"
+                                   />
+                           </td>
+                           <td>
+                               <img id="Img2" 
+                                   onmouseover="openImageWindow(2)"
+                                   src="c.jpg"
+                                   width = ""
+                                   height = "120"
+                                   />
+                           </td>
+                           <td>
+                               <img id="Img3" 
+                                   onmouseover="openImageWindow(3)"
+                                   src="d.jpg"
+                                   width = ""
+                                   height = "120"
+                                   />
+                           </td>
+                       </tr>
+
+                   </table>
+                    
+            </form>
+           </div>
+</body>
+</html>

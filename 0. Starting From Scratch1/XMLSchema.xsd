@@ -1,0 +1,58 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<xs:schema 
+    xmlns:xs="http://www.w3.org/2001/XMLSchema">
+
+  <xs:element name ="employees">
+
+    <xs:complexType>
+
+      <xs:sequence>
+
+        <xs:element name="employee" minOccurs="0" maxOccurs="unbounded">
+
+          <xs:complexType>
+
+            <xs:sequence>
+
+              <xs:element name ="ecode" type="xs:positiveInteger"/>
+              <xs:element name ="ename" type="xs:string"/>
+              <xs:element name ="salary" type="saltype"/>
+              <xs:element name ="deptid" type="xs:positiveInteger"/>
+              
+              
+            </xs:sequence>
+            
+            <xs:attribute name="pid" type="ptype"/>
+            
+          </xs:complexType>
+          
+        </xs:element>
+        
+      </xs:sequence>
+      
+    </xs:complexType>
+    
+  </xs:element>
+  <xs:simpleType name="ptype">
+
+
+    <xs:restriction base="xs:string">
+
+      <xs:enumeration value="p1|p2|p3"/>
+      
+    </xs:restriction>
+    
+  </xs:simpleType>
+
+  <xs:simpleType name="saltype">
+
+
+    <xs:restriction base="xs:int">
+
+      <xs:minInclusive value="1000"/>
+      <xs:maxExclusive value="2000"/>
+
+    </xs:restriction>
+
+  </xs:simpleType>
+</xs:schema>

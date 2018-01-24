@@ -1,0 +1,110 @@
+﻿<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+    <title>Validation Example</title>
+    
+    <link href="myStyleSheet.css" rel="stylesheet" />
+
+
+    <script>
+
+        function validateData()
+        {
+
+
+            var ecStatus = true;
+            var enState = true;
+            var cityStatus = true;
+            var errorMessage='';
+
+            var ecPattern = /^[0-9]*$/;
+
+            var emp_code = ecode.value;
+            if (!ecPattern.test(emp_code)) {
+
+                ecStatus = false;
+                errorMessage += "Employee Code must be a number</br>";
+
+            }
+
+            var enPattern = /^[aA-zZ]*$/;
+            var emp_name = ename.value;
+            if (!enPattern.test(emp_name)) {
+
+                ecStatus = false;
+                errorMessage += "Employee Code must be a number</br>";
+
+            }
+
+            var city_name = cmbCity.value;
+            if (city_name == "")
+            {
+                cityStatus = false;
+                errorMessage += "City must be selected</br>";
+            }
+
+
+            showBox.innerHTML = errorMessage;
+            return ecStatus && enState && cityStatus;
+
+
+        }
+       
+
+    </script>
+
+
+</head>
+<body>
+    <div class="myHeader">
+        <header class="styleHeading">    
+        Validation using RegEx
+        </header>
+    </div>
+
+       <div class="myForm">
+        <form class="myTable" onsubmit="return validateData()">
+        
+
+                    <br />
+                    <label for="ecode" class="myFormLabel">Enter ecode:</label><br />
+                    <input type="text" id="ecode" class="myFormInput" name="textEcode"/><br />
+
+                    <br />
+                    <label for="ename" class="myFormLabel">Enter Employee Name:</label><br />
+                    <input type="text" id="ename" class="myFormInput" name="textName"/><br />
+                    
+                    <br />
+                    <label for="data" class="myFormLabel">City:</label><br />
+                    
+                    
+                    <select name ="cmbCity" id="cmbCity" class="myFormList">
+
+                        <option value ="">Select...</option>
+                        <option value ="BLR">Bangalore</option>
+                        <option value ="MYS">Mysore</option>
+                        <option value ="HYD">Hydrabad</option>
+                        <option value ="CHN">Chennai</option>
+                        <option value ="DLI">Delhi</option>
+
+                    </select>
+                    
+
+                    <br />
+            
+                    
+                    <br />
+                    <button type="submit" class="myGoButton" onclick="validateData()">Submit</button>
+            
+            <br />  
+                    <br />
+                    <button type="reset" class="myGoButton" onclick="validateData()">Reset</button>
+                    
+                    <br />
+
+
+            </form>
+           <p id="showBox" style="font-family:Tahoma;text-align:center;color:red;border:dotted;border-collapse:collapse;border-width:1px;width:200pt;text-align:center;margin:auto"></p>
+           </div>
+</body>
+</html>

@@ -1,0 +1,13 @@
+﻿body {
+    background-color:gray
+}
+h1, p {
+    color:yellow;
+    background-color:yellow
+}
+.s1 {
+    background-color:pink;
+}
+.s2 {
+    color:green;
+}

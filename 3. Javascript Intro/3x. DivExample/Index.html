@@ -1,0 +1,46 @@
+﻿    <!DOCTYPE html>
+    <html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <title></title>
+
+        <!-- -->
+        <script>
+            function changePosition() {
+                d1.style.left = "200pt";
+            }
+            function hideIT() {
+                d1.style.display = "block";
+            }
+
+            function showIT() {
+                d1.style.visibility = "hidden";
+                d1.style.display = "none";
+            }
+            function setText() {
+
+                b.innerText = "It's a shitty company though";
+
+                b.innerHTML = "<b>It's a shitty company though</b>";
+
+            }
+        </script>
+
+
+    </head>
+    <body>
+
+
+        <div id ="d1" onclick="changePosition()" style="position:absolute;left:20pt;right:20pt; background-color:yellow; width:200pt;height:30pt">
+
+            Click Here!
+
+        </div> 
+        
+
+        <input type="button" value="Hide" onclick="showIT()"/>
+        <input type="button" value="Show" onclick="hideIT()"/>
+
+        <h2 onclick="setText()" id="b">Welcome to ITC iNFOTECH</h2>
+
+    </body>
+    </html>
