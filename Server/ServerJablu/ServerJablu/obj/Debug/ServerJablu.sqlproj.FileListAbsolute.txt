@@ -1,0 +1,7 @@
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\bin\Debug\ServerJablu.dacpac
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\obj\Debug\Model.xml
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\obj\Debug\refactor.xml
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\obj\Debug\postdeploy.sql
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\obj\Debug\predeploy.sql
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\obj\Debug\ServerJablu.dll
+D:\Abinash Mishra\Server\ServerJablu\ServerJablu\obj\Debug\ServerJablu.pdb
